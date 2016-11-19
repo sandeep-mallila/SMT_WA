@@ -1,0 +1,6 @@
+framework module Pods_WayAlertsTests {
+  umbrella header "Pods-WayAlertsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,39 @@
+PODS:
+  - BRYXBanner (0.5.2):
+    - BRYXBanner/Core (= 0.5.2)
+  - BRYXBanner/Core (0.5.2)
+  - DropDown (1.0.1)
+  - EZAlertController (0.3)
+  - GoogleMaps (2.0.1):
+    - GoogleMaps/Maps (= 2.0.1)
+  - GoogleMaps/Base (2.0.1)
+  - GoogleMaps/Maps (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
+  - MAThemeKit (1.0)
+  - RAMAnimatedTabBarController (1.5.3)
+  - SwiftyJSON (2.3.2)
+  - Toast-Swift (1.3.0)
+
+DEPENDENCIES:
+  - BRYXBanner
+  - DropDown
+  - EZAlertController (= 0.3)
+  - GoogleMaps
+  - MAThemeKit
+  - RAMAnimatedTabBarController
+  - SwiftyJSON
+  - Toast-Swift (~> 1.3.0)
+
+SPEC CHECKSUMS:
+  BRYXBanner: 5f0911d52e0a77e088f7ea7ddcdebd02afb7828a
+  DropDown: 335df9e9547e97a861a60aed8448821e239d3513
+  EZAlertController: 178808422e5281c3ffb20c28cb3eb555088bf07e
+  GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
+  MAThemeKit: 559acc98ceadc051cccb1b6bb0c4ca28475eb021
+  RAMAnimatedTabBarController: 04b624cf8958a0032bf7fa9c0f2c515f59d30b9c
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Toast-Swift: 25c3d98db42dc70d9a77b5006ee000e0becb458e
+
+PODFILE CHECKSUM: e2a3ca9e331012a6e2ba5f8c4e52b1f92755e640
+
+COCOAPODS: 1.0.1

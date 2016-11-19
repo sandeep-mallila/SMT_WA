@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Xcode 7.0">
+    <entity name="Friends" representedClassName=".Friends" syncable="YES">
+        <attribute name="acceptStatus" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="allowAlertsIn" attributeType="String" syncable="YES"/>
+        <attribute name="allowAlertsOut" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" attributeType="String" syncable="YES"/>
+        <attribute name="isRequestInitiator" attributeType="String" syncable="YES"/>
+        <attribute name="mobileNumber" attributeType="String" minValueString="10" maxValueString="10" syncable="YES"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="userID" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="User" inverseName="friends" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Locations" representedClassName=".Locations" syncable="YES">
+        <attribute name="acceptStatus" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zoomLevel" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
+        <attribute name="masterAlertsInToggle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="masterAlertsOutToggle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileNumber" attributeType="String" minValueString="10" maxValueString="10" syncable="YES"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="userID" attributeType="String" syncable="YES"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Friends" inverseName="user" inverseEntity="Friends" syncable="YES"/>
+    </entity>
+    <entity name="WayLocationHistory" representedClassName=".WayLocationHistory" syncable="YES">
+        <attribute name="batteryLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distanceTravelledSoFar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estimatedDistance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estimatedDuration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isWayRecalculated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="receivedDateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordedLatLong" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeElapsed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wayID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Ways" representedClassName=".Ways" syncable="YES">
+        <attribute name="createdDateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationLatLong" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distanceTravelledSoFar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endedDateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estimatedDistance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estimatedDuration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdatedDateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerBatteryLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="owningUserID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="polyLinesData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qrCodeData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sourceAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sourceLatLong" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startedDateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeElapsed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wayFriends" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wayID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wayPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wayType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Friends" positionX="-632" positionY="-700" width="128" height="180"/>
+        <element name="Locations" positionX="-513" positionY="-621" width="128" height="150"/>
+        <element name="User" positionX="-389" positionY="-684" width="128" height="165"/>
+        <element name="Ways" positionX="-513" positionY="-612" width="128" height="390"/>
+        <element name="WayLocationHistory" positionX="-513" positionY="-549" width="128" height="180"/>
+    </elements>
+</model>
