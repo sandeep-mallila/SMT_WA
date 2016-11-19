@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import GoogleMaps
 import EZAlertController
+import Crashlytics
 
 var globalLocationManager = WALocationManager()
 
@@ -19,6 +20,7 @@ class MapsViewController: UIViewController, GMSMapViewDelegate, WayLocationUpdat
     
     @IBOutlet weak var btnWayAction: UIBarButtonItem!
     @IBAction func btnWayActionTapped(sender: AnyObject) {
+        Crashlytics.sharedInstance().crash()
         if(btnWayAction.title == "Start"){
             btnWayAction.title = "Stop"
             btnWayAction.tintColor = UIColor.redColor()

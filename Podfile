@@ -13,6 +13,9 @@ target 'WayAlerts' do
     pod 'DropDown'
     
     pod 'MAThemeKit'
+    
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'WayAlertsTests' do

@@ -9,11 +9,12 @@
 import UIKit
 import CoreData
 import EZAlertController
+import Crashlytics
 
 var locationToSearch:String = ""
 
 class LocationsViewControl: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, UISearchBarDelegate {
- 
+    
     /*****************************************************
      UI Outlets from the Storyboard
      *****************************************************/
@@ -288,6 +289,7 @@ class LocationsViewControl: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBAction func doEdit(sender: AnyObject) {
+        Crashlytics.sharedInstance().crash()
         if (self.locationsTableView.editing) {
             editButton.title = "Edit"
             //sender.title = "Edit"

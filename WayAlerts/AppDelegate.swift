@@ -12,6 +12,9 @@ import CoreData
 import MAThemeKit
 import DropDown
 
+import Fabric
+import Crashlytics
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -50,6 +53,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //ThemeManager.applyTheme(theme)
         
         MAThemeKit.setupThemeWithPrimaryColor(UIColor.init(red: 0, green: 184/256, blue: 156/256, alpha: 1), secondaryColor: UIColor.whiteColor(), fontName: "HelveticaNeue-Light", lightStatusBar: true)
+        
+        // Crashlytics initializer
+        Crashlytics().debugMode = true
+        Fabric.with([Crashlytics.self])
         
         return true
     }
